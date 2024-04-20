@@ -1,5 +1,6 @@
 # Logan Burnett's Portfolio
-## Connect Four App
+This my portfolio for MERN stack coding projects.
+## [Connect Four App](./banking-app)
 
 ## Number Guessing App
 
