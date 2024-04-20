@@ -1,11 +1,11 @@
 # Logan Burnett's Portfolio
 This my portfolio for MERN stack coding projects.
-## [Connect Four App](./banking-app)
+## [Connect Four App](./connect-four-app)
 
-## Number Guessing App
+## [Number Guessing App](./number-guessing-app)
 
-## Hangman App
+## [Hangman App](./hangman-app)
 
-## Banking App
+## [Banking App](./banking-app)
 
-## California Speed App
+## [California Speed App](./california-speed-app)
