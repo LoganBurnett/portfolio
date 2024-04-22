@@ -77,9 +77,67 @@
 
           <div class="work__box">
             <div class="work__text">
+              <h3>California Speed Game</h3>
+              <p>
+                This is an app for playing the card game California Speed, which incorporates drag-and-drop functionality for moving the cards into piles.
+                We also used sockets to let two users on the same network play the game against each other. Once the game finishes, the players 
+                are each asked for their names, then that game's information is stored in a MongoDB database and displayed for the users to see.
+              </p>
+              <ul class="work__list">
+                My Contributions:
+                <li>The drag-and-drop functionality and display for the cards and piles</li>
+                <li>All of the sockets functionality</li>
+                <li>The game history page</li>
+                <li>Some of the game logic, including the card shuffling algorithm</li>
+              </ul>
+              <p>
+                One of the technical challenges we overcame during this project was differentiating between the players, which we solved by 
+                using each player's socket id in a key value pair with their player number.
+              </p>
+
+              <div class="work__links">
+                <a href="https://github.com/LoganBurnett/portfolio/tree/main/california-speed-app" target="_blank" class="link__text">
+                  See the Code <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/speed.gif" class="work__image" alt="Speed gif" />
+              <img src="./images/speed-history.png" class="work__image" alt="Speed game history" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Banking App</h3>
+              <p>
+                This is a relatively simplified concept for a banking app
+              </p>
+              <ul class="work__list">
+                My Contributions:
+                <li></li>
+              </ul>
+              <p>
+                One of the technical challenges we overcame during this project was getting the sessions to work correctly. We solved this by
+              </p>
+
+              <div class="work__links">
+                <a href="https://github.com/LoganBurnett/portfolio/tree/main/banking-app" target="_blank" class="link__text">
+                  See the Code <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/banking.gif" class="work__image" alt="Banking gif" />
+              <img src="./images/banking.png" class="work__image" alt="Banking" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
               <h3>Connect Four Game</h3>
               <p>
-                A simple connect four game I made to learn and familiarize myself with the basics of React. 
+                This is a simple connect four game made to learn and familiarize myself with the basics of React. 
                 The app automatically changes turns, can find the winner of the game in a horizontal, vertical, or diagonal direction, and also accounts for the possiblity of a tie.
               </p>
 
@@ -90,8 +148,8 @@
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/connect-four.gif" class="work__image" alt="Project 1" />
-              <img src="./images/connect-four-tie.png" class="work__image" alt="Project 1" />
+              <img src="./images/connect-four.gif" class="work__image" alt="Connect four gif" />
+              <img src="./images/connect-four-tie.png" class="work__image" alt="Connect four tie" />
             </div>
           </div>
 
@@ -120,34 +178,6 @@
             </div>
             <div class="work__image-box">
               <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
             </div>
           </div>
         </div>
@@ -200,8 +230,6 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
         &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
       </p>
