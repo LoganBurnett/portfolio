@@ -43,9 +43,6 @@
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">About Me</a>
-          </li>
-          <li class="nav__item">
             <a href="#contact" class="nav__link">Contact</a>
           </li>
         </ul>
@@ -80,8 +77,8 @@
               <h3>California Speed Game</h3>
               <p>
                 This is an app for playing the card game California Speed, which incorporates drag-and-drop functionality for moving the cards into piles.
-                We also used sockets to let two users on the same network play the game against each other. Once the game finishes, the players 
-                are each asked for their names, then that game's information is stored in a MongoDB database and displayed for the users to see.
+                The app also uses sockets to let two users on the same network play the game against each other. Once the game finishes, the players 
+                are each asked for their names, then that game's information is stored in a Mongo database and displayed for the users to see.
               </p>
               <ul class="work__list">
                 My Contributions:
@@ -111,14 +108,23 @@
             <div class="work__text">
               <h3>Banking App</h3>
               <p>
-                This is a relatively simplified concept for a banking app
+                This is a relatively simplified concept for a banking app. The user can sign up and log into an account, which provides them with
+                a checking, savings, and credit account. The user can then choose to deposit, withdraw, and/or transfer money between their accounts, 
+                which will then show up on their transaction history page. The app uses sha256 hashing and salting on each user's password and stores
+                them in a MongoDB database. It also uses sessions to track the user across pages and ensure that their secure information is only 
+                accessible when they are properly logged in.
               </p>
               <ul class="work__list">
                 My Contributions:
-                <li></li>
+                <li>The sign up and login page</li>
+                <li>The accounts page</li>
+                <li>The hashing, salting, storing, and validating of passwords</li>
+                <li>All of the session functionality</li>
+                <li>The backend route for handling deposits, withdraws, and transfers</li>
               </ul>
               <p>
                 One of the technical challenges we overcame during this project was getting the sessions to work correctly. We solved this by
+                changing how cors was included in the backend.
               </p>
 
               <div class="work__links">
@@ -128,8 +134,57 @@
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/banking.gif" class="work__image" alt="Banking gif" />
-              <img src="./images/banking.png" class="work__image" alt="Banking" />
+              <img src="./images/banking-app.gif" class="work__image" alt="Banking gif" />
+              <img src="./images/banking-signup.png" class="work__image" alt="Banking signup" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Hangman App</h3>
+              <p>
+                This is an app to play the game of Hangman. The user enters their name, then a random word is chosen from the database and 
+                it's length is sent back and displayed for them to start guessing letters. Once the game is finished, their score is put 
+                into the Mongo database and the highscores for each word length are displayed.
+              </p>
+              <ul class="work__list">
+                My Contributions:
+                <li>The backend route of getting a new random word</li>
+                <li>The backend route of guessing a letter</li>
+                <li>The backend route of ending the game and storing the result</li>
+                <li>Helped with properly displaying the word length and position of correct letters</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://github.com/LoganBurnett/portfolio/tree/main/hangman-app" target="_blank" class="link__text">
+                  See the Code <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/hangman.gif" class="work__image" alt="Hangman gif" />
+              <img src="./images/hangman.png" class="work__image" alt="Hangman" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Number Guessing Game</h3>
+              <p>
+                This is a simple number guessing game that was made to learn server-side components with Express. The app prompts the user for 
+                a name and generates a random number between 1 and 100 on the backend. The user then submits guesses until they are correct, then 
+                their score is stored in a Mongo database, which is then displayed in a highscores table.
+              </p>
+
+              <div class="work__links">
+                <a href="https://github.com/LoganBurnett/portfolio/tree/main/number-guessing-game" target="_blank" class="link__text">
+                  See the Code <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/num-guessing.gif" class="work__image" alt="Number guessing gif"/>
+              <img src="./images/num-guessing.png" class="work__image" alt="Number guessing"/>
             </div>
           </div>
 
@@ -152,60 +207,6 @@
               <img src="./images/connect-four-tie.png" class="work__image" alt="Connect four tie" />
             </div>
           </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Number Guessing Game</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="A photo" />
-          </div>
         </div>
       </div>
     </section>
@@ -217,9 +218,6 @@
     <div class="row">
       <h2>Contact Info</h2>
       <div class="contact__info">
-        <p>
-          
-        </p>
         <!-- Replace the email with yours -->
         <a href="mailto:burnettloganj@gmail.com" class="btn">burnettloganj@gmail.com</a>
       </div>
@@ -235,7 +233,7 @@
       </p>
       <div class="footer__github-buttons">
         <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
+          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch"
           frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
         </iframe>
       </div>
