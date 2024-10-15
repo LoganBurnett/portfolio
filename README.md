@@ -1,16 +1,17 @@
 # Logan Burnett's Portfolio
-This is my portfolio for my personal coding projects. [View the full portfolio site here.](https://loganburnett.github.io/portfolio/)
+This is my portfolio for my coding projects. You can view [the full portfolio site here](https://loganburnett.github.io/portfolio/) for more information.
 
 ## ASP.NET Projects
+### [SunridgeHOA's Classified Ads System](https://sunridge.info/)
 ### [Online Storefront (CBTD)](./CBTD)
 
-## MERN Stack Projects
-### [Connect Four App](./connect-four-app)
-
-### [Number Guessing App](./number-guessing-app)
-
-### [Hangman App](./hangman-app)
+## MERN/React Projects
+### [California Speed App](./california-speed-app)
 
 ### [Banking App](./banking-app)
 
-### [California Speed App](./california-speed-app)
+### [Hangman App](./hangman-app)
+
+### [Number Guessing App](./number-guessing-app)
+
+### [Connect Four App](./connect-four-app)
