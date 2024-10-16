@@ -10,3 +10,5 @@ This is my portfolio for my coding projects. You can view [the full portfolio si
 ### [California Speed App](./california-speed-app)
 
 ### [Banking App](./banking-app)
+
+### [Weather App](./weather-app)
