@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <!-- Put your site title here -->
+  <!-- Site title -->
   <title>
-    Logan Burnett's Portfolio - Personal Projects
+    Logan Burnett's Portfolio - My Projects
   </title>
 
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Logan Burnett, Web Development, React, MERN, Express, MongoDB" />
+  <!-- Keywords -->
+  <meta name="keywords" content="Logan Burnett, Web Development, React, MERN, Express, MongoDB, ASP.NET" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -33,10 +32,8 @@
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Personal Projects</span>
+          <span>My Projects</span>
         </h1>
-        <!-- Put a small paragraph about yourself -->
         <p>Projects made for school and/or other personal interests</p>
         <a href="https://github.com/LoganBurnett/portfolio" class="btn btn--pink">View the Repository</a>
       </div>
@@ -53,6 +50,35 @@
         <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
+          <div class="work__box">
+            <div class="work__text">
+                <h3>Sunridge HOA Classified Ads System & General Updates</h3>
+                <p>
+                  This is the work my team did to improve the Sunridge HOA's ASP.NET website, based on the client's requirements. 
+                  We implemented new features and bug fixes, including a new classified ads system, an online invoicing system, 
+                  and a water information news page.
+                </p>
+                <ul class="work__list">
+                  My Contributions:
+                  <li>The classified ads creation, updating, and deletion process</li>
+                  <li>A background service to auto-archive classified ads that are 30+ days old</li>
+                  <li>The functionality for admins to choose which of them will be assigned to classified ad content monitoring</li>
+                  <li>All of the water information news pages and their functionalities</li>
+                  <li>Various additional bug fixes and quality checks</li>
+                </ul>
+                <div class="work__links">
+                  <a href="https://sunridge.info/" target="_blank" class="link__text">
+                    Visit the site <span>&rarr;</span>
+                  </a>
+              </div>
+            </div>
+            
+            <div class="work__image-box">
+              <img src="./images/classifieds.gif" class="work__image" alt="Classified ads gif" />
+              <img src="./images/invoices.png" class="work__image" alt="Invoices" />
+              <img src="./images/water-info.png" class="work__image" alt="Water info page" />
+            </div>
+          </div>
 
           <div class="work__box">
             <div class="work__text">
@@ -138,75 +164,7 @@
               <img src="./images/banking-signup.png" class="work__image" alt="Banking signup" />
             </div>
           </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Hangman App</h3>
-              <p>
-                This is an app to play the game of Hangman. The user enters their name, then a random word is chosen from the database and 
-                its length is sent back and displayed for them to start guessing letters. Once the game is finished, their score is put 
-                into the Mongo database and the highscores for each word length are displayed.
-              </p>
-              <ul class="work__list">
-                My Contributions:
-                <li>The backend route of getting a new random word</li>
-                <li>The backend route of guessing a letter</li>
-                <li>The backend route of ending the game and storing the result</li>
-                <li>Helped with properly displaying the word length and position of correct letters</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://github.com/LoganBurnett/portfolio/tree/main/hangman-app" target="_blank" class="link__text">
-                  See the Code <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/hangman.gif" class="work__image" alt="Hangman gif" />
-              <img src="./images/hangman.png" class="work__image" alt="Hangman" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Number Guessing Game</h3>
-              <p>
-                This is a simple number guessing game that was made to learn server-side components with Express. The app prompts the user for 
-                a name and generates a random number between 1 and 100 on the backend. The user then submits guesses until they are correct, then 
-                their score is stored in a Mongo database, which is then displayed in a highscores table.
-              </p>
-
-              <div class="work__links">
-                <a href="https://github.com/LoganBurnett/portfolio/tree/main/number-guessing-app" target="_blank" class="link__text">
-                  See the Code <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/num-guessing.gif" class="work__image" alt="Number guessing gif"/>
-              <img src="./images/num-guessing.png" class="work__image" alt="Number guessing"/>
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Connect Four Game</h3>
-              <p>
-                This is a simple connect four game made to learn and familiarize myself with the basics of React. 
-                The app automatically changes turns, can find the winner of the game in a horizontal, vertical, or diagonal direction, and also accounts for the possibility of a tie.
-              </p>
-
-              <div class="work__links">
-                <a href="https://github.com/LoganBurnett/portfolio/tree/main/connect-four-app" target="_blank" class="link__text">
-                  See the Code <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/connect-four.gif" class="work__image" alt="Connect four gif" />
-              <img src="./images/connect-four-tie.png" class="work__image" alt="Connect four tie" />
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
