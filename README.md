@@ -6,6 +6,9 @@ This is my portfolio for my coding projects. You can view [the full portfolio si
 
 ### [Online Storefront (CBTD)](./CBTD)
 
+## Django Projects
+### [Social Media App](./social-media-app)
+
 ## MERN/React Projects
 ### [California Speed App](./california-speed-app)
 

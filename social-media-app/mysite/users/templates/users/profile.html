@@ -1,0 +1,37 @@
+{% extends 'social_media/base.html' %}
+
+{% block profile %}{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1 class="text-center mt-1">Profile</h1>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-md">
+          <img src="{{ user.profile.image.url }}" class="img-fluid" />
+        </div>
+        <div class="col-md-9 ms-3">
+          <h2>{{ user.username }}</h2>
+          <h2>Display Name: {{ user.profile.display_name }}</h2>
+          <a class="btn btn-primary mb-3 mt-2" href="{% url 'edit_profile' %}">Edit Profile</a>
+          <form action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+            <button class="btn btn-outline-warning" type="submit">Logout</button>
+          </form>
+        </div>
+      </div>
+      {% if posts %}
+        <h2 class="mt-2">Your posts</h2>
+        {% for post in posts %}
+        <div class="row mb-3">
+          {% include 'social_media/post.html' with post=post liked_posts=liked_posts %}
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}

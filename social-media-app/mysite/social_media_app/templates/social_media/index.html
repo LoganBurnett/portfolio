@@ -1,0 +1,118 @@
+{% extends 'social_media/base.html' %}
+
+{% block feed %}
+  {% if title %}
+    btn-primary
+  {% else %}
+    btn-outline-primary
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h1 class="text-center mt-1">
+    {% if title %}
+      {{ title }}
+    {% else %}
+      Home
+    {% endif %}
+  </h1>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+      <div class="row mb-3">
+        <div class="text-center d-flex flex-md-row flex-column-reverse justify-content-between p-0">
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseSearch"
+            aria-expanded="false"
+            aria-controls="collapseSearch"
+          >
+            <i class="bi bi-search me-1"></i> Search Posts
+          </button>
+          {% if user.is_authenticated %}
+            <a class="btn btn-primary mb-md-0 mb-3" href="{% url 'new_post' %}">
+              <i class="bi bi-plus"></i> New Post
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="row my-3 {% if not search_term %}collapse{% endif %}" id="collapseSearch">
+        <form class="d-flex p-0" action="" method="GET">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            name="search_term"
+            value="{% if search_term %}{{ search_term }}{% endif %}"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+
+      {% if posts %}
+        {% for post in posts %}
+          <div class="row mb-3">
+            {% include 'social_media/post.html' with post=post liked_posts=liked_posts %}
+          </div>
+        {% endfor %}
+      {% else %}
+        {% if search_term %}
+          <p>No results found for "{{ search_term }}"</p>
+        {% elif title %}
+          <p>You are not following anyone yet</p>
+        {% else %}
+          <p>No posts to display</p>
+        {% endif %}
+      {% endif %}
+      
+      {% if posts.has_next or posts.has_previous %}
+      <div class="row">
+        <nav class="d-flex justify-content-center" aria-label="Page navigation">
+          <ul class="pagination">
+            {% if posts.has_previous %}
+            <li class="page-item">
+              <a
+                class="page-link"
+                href="?page={{ posts.previous_page_number }}"
+              >
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            {% endif %}
+            <li class="page-item disabled">
+              <span class="page-link">
+                Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+              </span>
+            </li>
+            {% if posts.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ posts.next_page_number }}">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+              <a class="page-link" href="">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+      </div>
+      {% endif %}
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}

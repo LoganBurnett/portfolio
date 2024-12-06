@@ -1,0 +1,44 @@
+{% extends 'social_media/base.html' %}
+
+{% block body %}
+<div class="container">
+  <h1 class="text-center mt-1">{{ pf_user.profile.display_name }}'s Profile</h1>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-8">
+      <div class="row mb-3">
+        <div class="col-md">
+          <img src="{{ pf_user.profile.image.url }}" class="img-fluid" />
+        </div>
+        <div class="col-md-9 ms-3">
+          <h2>Username: {{ pf_user.username }}</h2>
+          <h2>Display Name: {{ pf_user.profile.display_name }}</h2>
+          <form method="POST" class="mt-3">
+            {% csrf_token %}
+            <input type="hidden" name="form_type" value="follow" />
+            <input type="hidden" name="user_id" value="{{ pf_user.pk }}" />
+            {% if is_following %}
+              <button type="submit" class="btn btn-primary">
+                  Unfollow 
+              </button>
+            {% else %}
+              <button type="submit" class="btn btn-outline-primary {% if not user.is_authenticated %}disabled{% endif %}">
+                Follow 
+              </button>
+            {% endif %}
+          </form>
+        </div>
+      </div>
+      {% if posts %}
+        <h2 class="mt-2">{{ pf_user.profile.display_name }}'s posts</h2>
+        {% for post in posts %}
+        <div class="row mb-3">
+          {% include 'social_media/post.html' with post=post liked_posts=liked_posts %}
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
