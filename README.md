@@ -9,6 +9,8 @@ This is my portfolio for my coding projects. You can view [the full portfolio si
 ## Django Projects
 ### [Social Media App](./social-media-app)
 
+### [Book API](./book-api)
+
 ## MERN/React Projects
 ### [California Speed App](./california-speed-app)
 
